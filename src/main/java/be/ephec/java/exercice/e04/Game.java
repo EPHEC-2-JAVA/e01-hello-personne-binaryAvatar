@@ -20,7 +20,7 @@ public class Game {
 
         // remplacer l'instruction suivante par une instruction contenant un opérateur ternaire.
         // La méthode doit retourner le joueur qui a gagné (= celui qui a le plus de points).
-        return null;
+        return p1.getPoints() < p2.getPoints() ? p2 : p1;
     }
 
     private void playNextRound() {
@@ -30,6 +30,13 @@ public class Game {
             result2 = rollDice();
         } while (result1 == result2);
         // insérer ici l'instruction contenant l'opérateur ternaire
+//ternaire sans Return? On est dans une void...
+       if(result1>result2){
+           p1.addPoint();
+       } else {
+           p2.addPoint();
+       }
+
 
         //
     }
